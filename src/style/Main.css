@@ -15,9 +15,87 @@
     overflow-y: scroll;
     gap: 10px;
     padding: 10px;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(7, 1fr);
+}
+.main header{
+    width: 80%;
+    max-width: 1800px;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+.main header h2{
+    font-size: var(--font-medium);
+    font-weight: var(--font-weight);
+}
+.main header .searchContainer{
+    padding: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+}
+.main header .searchContainer .search-bar{
+    max-width: 450px;
+    width: 50%;
+    height: 50px;
+    background: var(--gray);
+    display: flex;
+    border-radius: 5px;
+    padding: 0px 10px;
+    align-items: center;
+    gap: 10px;
+    justify-content: start;
+}
+.main header .searchContainer span{
+    background: var(--gray);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+.main header .searchContainer span:hover{
+    background: var(--darkgray);
+}
+.main header .searchContainer span .dropdown{
+    position: absolute;
+    left: 0;
+    top: 50px;
+    z-index: 2;
+    background: var(--gray);
+    width: 80px;
+    height: auto;
+    border-radius: 5px;
+    display: none;
+    padding: 5px;
+    transition: 0.2s ease-in;
+
+}
+.main header .searchContainer span .dropdown.show{
+    display: block;
+}
+.main header .searchContainer span .dropdown li{
+    height: 30px;
+    display: grid;
+    place-items: center;
+    width: 100%;
+}
+.main header .searchContainer span .dropdown li:hover{
+    background: var(--darkgray);
+    border-radius: 5px;
 }
 
+
+.main header .search-bar input{
+    width: 100%;
+    outline: none;
+    border: none;
+    background: none;
+    font-size: var(--font-normal);
+}
 .main main .card{
     width: 100%;
     height: 260px;
@@ -346,6 +424,9 @@
   .main main {
         width: 95%;
     }
+    .main header{
+        width: 90%;
+     }
 }
 @media (max-width: 1130px) {
     .main main {
@@ -356,13 +437,18 @@
     .main main {
         grid-template-columns: repeat(4, 1fr);
     }
+
 }
 @media (max-width: 700px) {
     .main main {
         grid-template-columns: repeat(3, 1fr);
     }
 }
-
+@media (max-width: 600px){
+    .main header .searchContainer .search-bar{
+        width: 80%;
+    }
+}
 @media (max-width: 470px) {
     .main main {
         grid-template-columns: repeat(2, 1fr);

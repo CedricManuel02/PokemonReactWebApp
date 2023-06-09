@@ -1,13 +1,13 @@
 import './App.css'
 import { Routes, Route } from "react-router-dom"
 import Main from './components/Main'
-import Api from './components/Api'
+import Documentation from './components/Documentation'
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={ <Main/> }/>
-        <Route path="/api" element={ <Api/> }/>
+        <Route path="/documentation" element={ <Documentation/> }/>
       </Routes>
     </div>
   );
