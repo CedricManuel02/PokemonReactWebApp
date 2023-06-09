@@ -1,0 +1,371 @@
+.main{
+    width: 100%;
+    height: 100vh;
+    max-width: 1800px;
+    
+}
+.main main{
+    width: 80%;
+    margin: auto;
+    max-width: 1800px;
+    height: auto;
+    max-height: 700px;
+    display: grid;
+    overflow: hidden;
+    overflow-y: scroll;
+    gap: 10px;
+    padding: 10px;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.main main .card{
+    width: 100%;
+    height: 260px;
+    max-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 10px;
+    flex-direction: column;
+    transition: 0.1s ease-in;
+    background: transparent;
+    position: relative;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+.main main .card h4{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    height: 30px;
+    width: 30px;
+    display: grid;
+    font-size: var(--font-normal);
+    color: var(--white);
+    place-items: center;
+    border-radius: 50px;
+    background: #56a2d9;
+}
+.main main .card:hover{
+    transform: rotate(-2deg);
+}
+.main main .card figure{
+    height: 200px;
+    width: 100px;
+    display: grid;
+    place-items: center;
+    object-fit: contain;
+    overflow: hidden;
+
+}
+.main main .card figcaption{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.main main .card figcaption h3{
+    font-weight: var(--font-weight);
+    font-size: var(--font-regular);
+    color: var(--black);
+}
+.main main .card figcaption span{
+    display: grid;
+    place-items: center;
+    width: 120px;
+    height: 35px;
+    border-radius: 10px;
+    color: var(--white);
+    font-weight: var(--font-weight);
+    font-size: var(--font-normal);
+}
+
+ .grass{
+    background: #78C850;
+} .fire{
+    background: #F08030;
+}
+ .bug{
+    background: #A8B820;
+} .rock{
+    background: #B8A038;
+}
+ .water{
+    background: #6890F0;
+}
+  .normal{
+    background: #A8A878;
+}
+.fighting{
+    background: #C03028;
+}
+  .flying{
+    background: #A890F0;
+}
+  .poison{
+    background: #A040A0;
+}
+ .steel{
+    background: #B8B8D0;
+}
+  .dragon{
+    background: #7038F8;
+}
+.electric{
+    background: #F8D030;
+}
+ .psychic{
+    background: #F85888;
+ }
+ .ice{
+    background: #98D8D8;
+}
+  .ground{
+    background: #E0C068;
+}
+ .fairy{
+    background: #F0B6BC;
+}
+ .ghost{
+    background: #7B62A3;
+}
+.main main::-webkit-scrollbar{
+    width: 10px;
+}
+.main main::-webkit-scrollbar-thumb{
+    background: var(--gray);
+    border-radius: 50px;
+}
+
+.modalWrapper{
+    width: 100%;
+    height: auto;
+}
+.modalWrapper header{
+    width: 90%;
+    margin:auto;
+    height: auto;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.modalWrapper header figure{
+    width: 150px;
+    height: 100px;
+    overflow: hidden;
+}
+.modalWrapper header figure img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.modalWrapper header .types{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.modalWrapper header .types span{
+    width: 80px;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    color: var(--white);
+}
+.modalWrapper section{
+    width: 90%;
+    margin: auto;
+    height: auto;
+    border-top: 50px;
+}
+.modalWrapper section .abilities h4{
+    font-size: var(--font-normal);
+}
+.modalWrapper section .abilities span label{
+    display: inline-block;
+    margin-right: 10px;
+    font-size: var(--font-normal);
+    background: var(--gray);
+    padding: 0px 10px;
+    border-radius: 5px;
+
+}
+
+
+.modalWrapper section .desc{
+    display: flex;
+    height: auto;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.modalWrapper section .description span, .modalWrapper section .experiece span{
+    display: inline-block;
+}
+.modalWrapper section .description label, .modalWrapper section .experiece label{
+    font-size: var(--font-normal);
+
+}
+.modalWrapper section .description p, .modalWrapper section .experiece p{
+    font-size: var(--font-normal);
+    background: var(--gray);
+    margin-right: 10px;
+    padding: 0px 10px;
+    border-radius: 5px;
+}
+.modalWrapper section .stats{
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 20px 0px;
+    flex-direction: column;
+}
+.modalWrapper section .stats span .range{
+    width: 100%;
+    height: 8px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--gray);
+}
+.modalWrapper section .stats span .range .percentage{
+    width: 60%;
+    border-radius: 10px;
+    height: 100%;
+}
+.percentage.hp{
+    background: #f85353;
+}
+.percentage.attack{
+    background: #ffae17;
+}
+.percentage.defense{
+    background: #fff837;
+}
+.percentage.special-attack{
+    background: #4dcaf1;
+}
+.percentage.special-defense{
+    background: #f36c6c;
+}
+.percentage.speed{
+    background: #bc73fb;
+}
+.icon{
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+}
+.evolution {
+    width: 100%;
+    height: 200px;
+    
+}
+.evolution .evolutionContainer{
+    display: flex;
+    gap: 10px;
+}
+.evolution .evolutionCard{
+    width: 100px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: var(--gray);
+    position: relative;
+}
+.evolution .evolutionCard span{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.evolution .evolutionCard img{
+    height: 80px;
+    width: 80px;
+    object-fit: contain;
+}
+.evolution h4, .stats h4{
+    font-size: var(--font-regular);
+}
+.loadingText{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    height: 150px;
+    gap: 10px;
+    text-align: center;
+}
+.wobbling-10 {
+    height:50px;
+    width:50px;
+    position: relative;
+  }
+  .wobbling-10::before,
+  .wobbling-10::after {
+    content: "";
+    position: absolute;
+    inset:0;
+    border-radius: 50%;
+    transform-origin: bottom;
+  }
+  .wobbling-10::after {
+    background:
+      radial-gradient(at 75% 15%,#fffb,#0000 35%),
+      radial-gradient(at 80% 40%,#0000,#0008),
+      radial-gradient(circle  5px,#fff 94%,#0000),
+      radial-gradient(circle 10px,#000 94%,#0000),
+      linear-gradient(#dd5442 0 0) top   /100% calc(50% - 5px),
+      linear-gradient(#fff    0 0) bottom/100% calc(50% - 5px)
+      #000;
+    background-repeat: no-repeat;
+    animation: w10 1s infinite cubic-bezier(0.5,120,0.5,-120);
+  }
+  
+  .wobbling-10::before {
+    background:#ddd;
+    filter: blur(8px);
+    transform: scaleY(0.4) translate(-13px, 0px);
+  }
+  
+  @keyframes w10 { 
+   30%,70% {transform:rotate(0deg)}
+   49.99%  {transform:rotate(0.2deg)}
+   50%     {transform:rotate(-0.2deg)}
+  }
+/*Media Query*/
+@media (max-width: 1200px) {
+  .main main {
+        width: 95%;
+    }
+}
+@media (max-width: 1130px) {
+    .main main {
+        grid-template-columns: repeat(5, 1fr);
+    }
+  }
+  @media (max-width: 978px) {
+    .main main {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media (max-width: 700px) {
+    .main main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 470px) {
+    .main main {
+        grid-template-columns: repeat(2, 1fr);
+    } 
+    
+}
